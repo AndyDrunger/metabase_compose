@@ -12,6 +12,11 @@ services:
       - ./metabase-data:/metabase-data
     networks:
       - app_net
+    deploy:
+      resources:
+        limits:
+          memory: 500mb
+
 
 networks:
   app_net:
